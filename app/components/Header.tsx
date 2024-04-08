@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "../assets/exothium_banner.png";
-import Connect from "./connect/Connect";
+import Connect from "./connect/connect";
 
 export default function Header() {
     return (

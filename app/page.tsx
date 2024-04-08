@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/Tabs";
-import { Player } from "./components/Player";
+import Header from "./components/header";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/tabs";
+import { Player } from "./components/player";
 import Image from "next/image";
 import avatar_1 from "./assets/avatar-1.png";
 import avatar_2 from "./assets/avatar-2.png";
@@ -8,7 +8,8 @@ import battle from "./assets/battle.png";
 import blade from "./assets/blade.png";
 import trophy from "./assets/trophy.png";
 import winner from "./assets/winner.png";
-import WinnerCard from "./components/WinnerCard";
+import WinnerCard from "./components/winner-card";
+import Countdown from "./components/countdown";
 
 export default function Home() {
 
@@ -28,7 +29,10 @@ export default function Home() {
               <div className="w-full flex space-x-10 h-full">
                 <div className="w-3/4 h-[450px] bg-black bg-[url('./assets/players-bg.png')] bg-no-repeat bg-cover bg-center border-y-4 border-[#031C3A] rounded-2xl
                 flex flex-col items-center justify-center">
-                  <div className="w-[65%] flex justify-between items-center -mt-6">
+                  <div className="w-[65%] flex justify-between items-center -mt-6 relative">
+                    <div className="absolute -right-[150px] -top-14">
+                      <Countdown seconds={7200} />
+                    </div>
                     <Player image={avatar_1} name="GrowleR" power="110.6" />
                     <Image src={battle} width={175} height={175} alt="battle" />
                     <Player image={avatar_2} name="Mecurolia" power="50.3" />
