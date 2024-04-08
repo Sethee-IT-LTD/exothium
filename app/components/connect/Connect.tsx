@@ -43,9 +43,9 @@ function Connect() {
     <div>
       {
         !connection ?
-          <button className={styles.connectbtn} onClick={connectWallet}>Connect</button>
+          <button className="bg-[#031C3A] py-3.5 px-7 text-white rounded-md text-lg" onClick={connectWallet}>Connect</button>
           :
-          <button className={styles.connectbtn} onDoubleClick={disconnectWallet}>{address.slice(0, 5)}...{address.slice(60, 66)}</button>
+          <button className="bg-[#031C3A] py-3.5 px-7 text-white rounded-md text-lg" onClick={disconnectWallet}>{address.slice(0, 5)}...{address.slice(60, 66)}</button>
       }
     </div>
   )
