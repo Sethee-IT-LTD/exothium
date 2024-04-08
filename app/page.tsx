@@ -5,6 +5,8 @@ import Image from "next/image";
 import avatar_1 from "./assets/avatar-1.png";
 import avatar_2 from "./assets/avatar-2.png";
 import battle from "./assets/battle.png";
+import blade from "./assets/blade.png";
+import trophy from "./assets/trophy.png";
 
 export default function Home() {
   return (
@@ -27,7 +29,29 @@ export default function Home() {
                     <Player image={avatar_2} name="Mecurolia" power="50.3" />
                   </div>
                 </div>
-                <div className="w-1/4 h-96 bg-orange-500"></div>
+                <div className="w-1/4 h-96 border-4 border-[#031C3A] rounded-xl bg-[#0A1017] p-2.5">
+                  <Tabs defaultValue="wins" className="w-full flex flex-col items-center justify-start h-full">
+                    <TabsList className="bg-[#031C3A] w-full">
+                      <TabsTrigger value="wins" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white w-full text-lg">
+                        <div className="flex items-center space-x-1">
+                          <Image src={blade} width={20} height={20} alt="blade" />
+                          <h3>Live win</h3>
+                        </div>
+                      </TabsTrigger>
+                      <TabsTrigger value="top" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white w-full text-lg">
+                        <div className="flex items-center space-x-1">
+                          <Image src={trophy} width={20} height={20} alt="trophy" />
+                          <h3>Top Players</h3>
+                        </div>
+                      </TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="wins" className="w-full h-full mt-10">
+                      <div className="bg-[#031C3A] w-full p-3.5">
+                      </div>
+                    </TabsContent>
+                    <TabsContent value="top">Change your password here.</TabsContent>
+                  </Tabs>
+                </div>
               </div>
             </TabsContent>
             <TabsContent value="history">Change your password here.</TabsContent>
