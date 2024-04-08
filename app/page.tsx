@@ -14,8 +14,8 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center mt-5 px-16 h-full w-full max-w-[1560px]">
           <Tabs defaultValue="arena" className="w-full flex flex-col items-center justify-center h-full">
             <TabsList className="bg-[#031C3A]">
-              <TabsTrigger value="arena" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">Account</TabsTrigger>
-              <TabsTrigger value="history" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">Password</TabsTrigger>
+              <TabsTrigger value="arena" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">Arena</TabsTrigger>
+              <TabsTrigger value="history" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">History</TabsTrigger>
             </TabsList>
             <TabsContent value="arena" className="w-full h-full mt-10">
               <div className="w-full flex space-x-10 h-full">
