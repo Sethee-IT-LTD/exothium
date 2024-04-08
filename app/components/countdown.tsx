@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
+import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Countdown({ seconds }: { seconds: number }) {
     const [timeLeft, setTimeLeft] = useState(seconds);
@@ -19,24 +20,30 @@ export default function Countdown({ seconds }: { seconds: number }) {
     }, [timeLeft]);
 
     return (
-        <div className="flex items-center space-x-2.5 justify-center">
-            <div className="flex flex-col items-center space-y-0.5">
-                <div className="px-3.5 py-2 bg-white rounded-xl">
-                    <h3 className="text-xl text-black font-semibold">{hours}</h3>
-                </div>
-                <p className="text-xs text-white">HOURS</p>
+        <div className="space-y-1 flex flex-col items-center">
+            <div className="flex items-center space-x-1">
+                <p className="text-white text-sm">TIME REMAINING</p>
+                <QuestionMarkCircleIcon className="w-5 h-5 text-white" />
             </div>
-            <div className="flex flex-col items-center space-y-0.5">
-                <div className="px-3.5 py-2 bg-white rounded-xl">
-                    <h3 className="text-xl text-black font-semibold">{minutes}</h3>
+            <div className="flex items-center space-x-2.5 justify-center">
+                <div className="flex flex-col items-center space-y-0.5">
+                    <div className="px-3.5 py-2 bg-white rounded-xl">
+                        <h3 className="text-xl text-black font-semibold">{hours}</h3>
+                    </div>
+                    <p className="text-xs text-white">HOURS</p>
                 </div>
-                <p className="text-xs text-white">MINUTES</p>
-            </div>
-            <div className="flex flex-col items-center space-y-0.5">
-                <div className="px-3.5 py-2 bg-white rounded-xl">
-                    <h3 className="text-xl text-black font-semibold">{secondsLeft}</h3>
+                <div className="flex flex-col items-center space-y-0.5">
+                    <div className="px-3.5 py-2 bg-white rounded-xl">
+                        <h3 className="text-xl text-black font-semibold">{minutes}</h3>
+                    </div>
+                    <p className="text-xs text-white">MINUTES</p>
                 </div>
-                <p className="text-xs text-white">SECONDS</p>
+                <div className="flex flex-col items-center space-y-0.5">
+                    <div className="px-3.5 py-2 bg-white rounded-xl">
+                        <h3 className="text-xl text-black font-semibold">{secondsLeft}</h3>
+                    </div>
+                    <p className="text-xs text-white">SECONDS</p>
+                </div>
             </div>
         </div>
     );
