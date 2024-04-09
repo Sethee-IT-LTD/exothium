@@ -14,6 +14,14 @@ import Countdown from "./components/countdown";
 import { Table, TableHead, TableHeader, TableRow } from "./components/table";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { cn } from "./lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./components/dialog"
 
 export default function Home() {
 
@@ -100,7 +108,20 @@ export default function Home() {
                     </div>
                     <div className="space-x-3.5 mt-10">
                       <button className="bg-white px-20 py-3.5 rounded-lg text-black">Flee</button>
-                      <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-20 py-3.5 rounded-lg text-white">Fight</button>
+                      <Dialog>
+                        <DialogTrigger>
+                          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-20 py-3.5 rounded-lg text-white">Fight</button>
+                        </DialogTrigger>
+                        <DialogContent className="flex flex-col items-center justify-center bg-[#0A1017]">
+                          <DialogHeader className="flex flex-col items-center justify-center">
+                            <DialogTitle className="text-3xl text-white">Awaiting Result</DialogTitle>
+                            <DialogDescription>
+                              The result will display in a moment
+                            </DialogDescription>
+                          </DialogHeader>
+                          <Image src={battle} width={175} height={175} alt="battle" />
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </div>
                   {/* Table */}
@@ -167,7 +188,7 @@ export default function Home() {
             <TabsContent value="history">Change your password here.</TabsContent>
           </Tabs>
         </div >
-      </div >
+      </div>
     </main >
   )
 }
