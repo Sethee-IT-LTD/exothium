@@ -13,10 +13,56 @@ import WinnerCard from "./components/winner-card";
 import Countdown from "./components/countdown";
 import { Table, TableHead, TableHeader, TableRow } from "./components/table";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
+import { cn } from "./lib/utils";
 
 export default function Home() {
 
   const winners = [1, 2, 3, 4];
+
+  const active_players = [
+    {
+      id: 1,
+      icon: avatar_1,
+      username: "GrowleR",
+      chances: 99.96,
+      power: 110.6
+    },
+    {
+      id: 2,
+      icon: avatar_1,
+      username: "GrowleR",
+      chances: 99.96,
+      power: 110.6
+    },
+    {
+      id: 3,
+      icon: avatar_1,
+      username: "GrowleR",
+      chances: 99.96,
+      power: 110.6
+    },
+    {
+      id: 4,
+      icon: avatar_1,
+      username: "GrowleR",
+      chances: 99.96,
+      power: 110.6
+    },
+    {
+      id: 5,
+      icon: avatar_1,
+      username: "GrowleR",
+      chances: 99.96,
+      power: 110.6
+    },
+    {
+      id: 6,
+      icon: avatar_1,
+      username: "GrowleR",
+      chances: 99.96,
+      power: 110.6
+    },
+  ]
 
   return (
     <main className="w-full min-h-screen bg-[url('./assets/spider-bg.png')] bg-no-repeat bg-cover bg-center bg-[#050C14]/95 bg-blend-darken">
@@ -71,33 +117,23 @@ export default function Home() {
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Chances</TableHead>
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Power</TableHead>
                         </TableRow>
-                        <TableRow className="bg-gradient-to-r from-[#C1272D]/90 via-[#C1272D]/50 to-transparent border-b-[#334155] !border-b-2 
-                        border-l-3.5 border-l-[#C1272D] !border-r-0 w-full">
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
-                            <Image src={avatar_1} width={65} height={65} alt="gladiether" />
-                          </TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
-                          <TableHead className="text-lg font-normal py-3.5 text-[#F15A24]">99.96%</TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">110.6</TableHead>
-                        </TableRow>
-                        <TableRow className="bg-gradient-to-r from-[#006837]/90 via-[#006837]/50 to-transparent border-b-[#334155] !border-b-2 
-                        border-l-3.5 border-l-[#006837] !border-r-0 w-full">
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
-                            <Image src={avatar_1} width={65} height={65} alt="gladiether" />
-                          </TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
-                          <TableHead className="text-lg text-[#F15A24] font-normal py-3.5">99.96%</TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">110.6</TableHead>
-                        </TableRow>
-                        <TableRow className="bg-gradient-to-r from-[#8A5CF5]/90 via-[#8A5CF5]/50 to-transparent !border-b-0
-                        border-l-3.5 border-l-[#8A5CF5] !border-r-0 w-full">
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
-                            <Image src={avatar_1} width={65} height={65} alt="gladiether" />
-                          </TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
-                          <TableHead className="text-lg text-[#F15A24] font-normal py-3.5">99.96%</TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">110.6</TableHead>
-                        </TableRow>
+                        {
+                          active_players.map((player, i) => (
+                            <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full`,
+                              (i % 3) == 0 && `from-[#C1272D]/90 via-[#C1272D]/50 to-transparent border-l-3.5 border-l-[#C1272D]`,
+                              (i % 3) == 1 && `from-[#006837]/90 via-[#006837]/50 to-transparent border-l-3.5 border-l-[#006837]`,
+                              (i % 3) == 2 && `from-[#8A5CF5]/90 via-[#8A5CF5]/50 to-transparent border-l-3.5 border-l-[#8A5CF5]`,
+                              i + 1 != active_players.length ? `border-b-[#334155] !border-b-2` : `!border-b-0`
+                            )} key={player.id}>
+                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
+                                <Image src={avatar_1} width={65} height={65} alt="gladiether" />
+                              </TableHead>
+                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
+                              <TableHead className="text-lg font-normal py-3.5 text-[#F15A24]">99.96%</TableHead>
+                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">110.6</TableHead>
+                            </TableRow>
+                          ))
+                        }
                       </TableHeader>
                     </Table>
                   </div>
@@ -130,8 +166,8 @@ export default function Home() {
             </TabsContent>
             <TabsContent value="history">Change your password here.</TabsContent>
           </Tabs>
-        </div>
-      </div>
-    </main>
+        </div >
+      </div >
+    </main >
   )
 }
