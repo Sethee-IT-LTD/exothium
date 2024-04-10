@@ -1,6 +1,6 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
-export function Player({ image, name, power }: { image: string | StaticImageData, name: string, power: string }) {
+export function Player({ image, name, power }: { image: string, name: string, power: string }) {
     return (
         <div className="flex flex-col items-center justify-center w-fit">
             <Image src={image} width={250} height={250} alt="player 1" />

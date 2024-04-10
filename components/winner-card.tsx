@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Badge } from "./badge";
 
-export default function WinnerCard({ image, name, power, chance }: { image: string | StaticImageData, name: string, power: string, chance: string }) {
+export default function WinnerCard({ image, name, power, chance }: { image: string, name: string, power: string, chance: string }) {
     return (
         <div className="bg-[#031C3A] w-full p-2 rounded-xl flex items-center space-x-3.5">
             <Image src={image} width={100} height={100} alt="winner" className="rounded-xl" />

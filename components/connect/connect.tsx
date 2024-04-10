@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import styles from "./connect.module.css"
 import { useEffect, useState } from 'react'
 import { connect, disconnect } from "starknetkit"
 
