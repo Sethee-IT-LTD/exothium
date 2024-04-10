@@ -102,7 +102,7 @@ export default function Home() {
                         <div className="space-y-1.5">
                           <p className="text-[#9D9B9A]">Amount</p>
                           <div className="w-80 flex space-x-5 items-center border-2 border-[#031C3A] bg-[#0A1017] py-1.5 pl-2.5 rounded-md">
-                            <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" />
+                            <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" min={0} />
                             <div className="pr-2">
                               <button className="px-3.5 py-1.5 text-white bg-[#084DA0] rounded-md text-lg">Max</button>
                             </div>
@@ -131,7 +131,7 @@ export default function Home() {
                         <div className="pt-8 space-y-3.5">
                           <div className="w-full space-y-1.5">
                             <div className="w-80 flex space-x-2.5 items-center border-2 border-[#031C3A] py-1.5 pl-2.5 rounded-md">
-                              <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" />
+                              <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" min={0} />
                               <div className="h-10 w-[1px] bg-white" />
                               <div className="pr-2.5">
                                 <div className="bg-transparent border-2 border-[#031C3A] rounded-md p-1.5 w-fit">

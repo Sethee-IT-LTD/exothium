@@ -93,7 +93,7 @@ export default function Play() {
                                         <div className="space-y-1.5">
                                             <p className="text-lg text-[#D9DCDD]">Power</p>
                                             <div className="w-80 flex items-center border-2 border-[#031C3A] p-2.5 rounded-md">
-                                                <input className="w-full border-0 outline-0 bg-transparent text-white mr-1.5" type="number" />
+                                                <input className="w-full border-0 outline-0 bg-transparent text-white mr-1.5" type="number" min={0} />
                                                 <div className="bg-transparent border-2 border-[#031C3A] rounded-md p-1.5 w-fit">
                                                     <Image src="/strk.png" width={25} height={25} alt="strk" />
                                                 </div>
