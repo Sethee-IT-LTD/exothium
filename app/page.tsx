@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Table, TableHead, TableHeader, TableRow } from "../components/table";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { cn } from "../lib/utils";
+import { Badge } from "../components/badge";
+import History from "../components/history";
 
 export default function Home() {
 
@@ -185,7 +187,9 @@ export default function Home() {
                 </div>
               </div>
             </TabsContent>
-            <TabsContent value="history">Change your password here.</TabsContent>
+            <TabsContent value="history" className="w-full">
+              <History />
+            </TabsContent>
           </Tabs>
         </div >
       </div>

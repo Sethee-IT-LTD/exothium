@@ -15,6 +15,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "../../components/dialog"
+import History from "../../components/history";
 
 export default function Play() {
 
@@ -173,10 +174,12 @@ export default function Play() {
                                 </div>
                             </div>
                         </TabsContent>
-                        <TabsContent value="history">Change your password here.</TabsContent>
+                        <TabsContent value="history">
+                            <History />
+                        </TabsContent>
                     </Tabs>
                 </div >
             </div>
-        </main >
+        </main>
     )
 }
