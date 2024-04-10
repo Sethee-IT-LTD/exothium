@@ -42,9 +42,9 @@ function Connect() {
     <div>
       {
         !connection ?
-          <button className="bg-[#031C3A] py-3.5 px-7 text-white rounded-md text-lg" onClick={connectWallet}>Connect</button>
+          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-16 py-3.5 rounded-lg text-white text-lg" onClick={connectWallet}>Connect</button>
           :
-          <button className="bg-[#031C3A] py-3.5 px-7 text-white rounded-md text-lg" onClick={disconnectWallet}>{address.slice(0, 5)}...{address.slice(60, 66)}</button>
+          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-16 py-3.5 rounded-lg text-white text-lg" onClick={disconnectWallet}>{address.slice(0, 5)}...{address.slice(60, 66)}</button>
       }
     </div>
   )
