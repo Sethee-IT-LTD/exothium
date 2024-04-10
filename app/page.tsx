@@ -168,7 +168,7 @@ export default function Home() {
                         </TableRow>
                         {
                           active_players.map((player, i) => (
-                            <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full !border-x-[3px] border-x-[#334155] border-b-[#334155] !border-b-2`)} key={player.id}>
+                            <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full !border-x-[3px] border-x-[#334155] border-b-[#334155] !border-b-[3px]`)} key={player.id}>
                               <TableHead className="h-[75px] flex space-x-5 items-center py-2.5">
                                 <Image src={`/${i + 1}.png`} width={65} height={65} alt="gladiether" className="w-[50px] h-[50px]" />
                                 <Image src="/avatar-1.png" width={65} height={65} alt="gladiether" />
