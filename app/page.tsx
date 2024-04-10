@@ -96,7 +96,7 @@ export default function Home() {
                 <div className="w-full h-full space-y-10">
                   <div className="w-full h-[375px] flex items-center justify-between space-x-10">
                     <div className="w-full flex justify-center items-center -mt-6 relative bg-[url('/arena-bg.png')]
-                    bg-no-repeat bg-cover bg-center bg-blend-multiply h-full">
+                    bg-no-repeat bg-cover bg-center bg-blend-multiply h-full border-[3px] border-[#031C3A] rounded-2xl">
                       <div className="flex flex-col items-center space-y-2.5 px-3.5 pt-5 pb-3.5 bg-[#0A1017CC]/80 border-[3px] border-[#031C3A] bg-blend-multiply rounded-xl">
                         <h4 className="text-white text-xl font-medium">Enter Arena</h4>
                         <div className="space-y-1.5">
@@ -151,7 +151,7 @@ export default function Home() {
                   </div>
                   {/* Table */}
                   <div className="w-full">
-                    <div className="bg-[#031C3A] w-full px-5 py-2.5 rounded-t-xl flex space-x-0.5 items-center justify-between border-[#334155] border-2">
+                    <div className="bg-[#031C3A] w-full px-5 py-2.5 rounded-t-xl flex space-x-0.5 items-center justify-between border-[#334155] border-[3px]">
                       <div className="flex items-center space-x-1.5">
                         <Image src="/trophy.png" width={20} height={20} alt="trophy" />
                         <h3 className="text-lg text-[#CAD4E0] font-normal">Top 10 Players</h3>
@@ -160,7 +160,7 @@ export default function Home() {
                     </div>
                     <Table className="w-full px-5 border-r-2">
                       <TableHeader className="w-full !border-[#334155]">
-                        <TableRow className="bg-transparent border-[#334155] !border-b-2 !border-x-2">
+                        <TableRow className="bg-transparent border-[#334155] !border-b-[3px] !border-x-[3px]">
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Rank</TableHead>
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Username</TableHead>
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Chances</TableHead>
@@ -168,7 +168,7 @@ export default function Home() {
                         </TableRow>
                         {
                           active_players.map((player, i) => (
-                            <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full !border-x-2 border-x-[#334155] border-b-[#334155] !border-b-2`)} key={player.id}>
+                            <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full !border-x-[3px] border-x-[#334155] border-b-[#334155] !border-b-2`)} key={player.id}>
                               <TableHead className="h-[75px] flex space-x-5 items-center py-2.5">
                                 <Image src={`/${i + 1}.png`} width={65} height={65} alt="gladiether" className="w-[50px] h-[50px]" />
                                 <Image src="/avatar-1.png" width={65} height={65} alt="gladiether" />
