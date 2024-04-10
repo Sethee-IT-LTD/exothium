@@ -119,13 +119,13 @@ export default function Play() {
                                     </div>
                                     {/* Table */}
                                     <div className="w-full">
-                                        <div className="bg-[#031C3A] w-full px-5 py-2.5 rounded-t-xl flex space-x-0.5 items-center border-[#334155] border-2">
+                                        <div className="bg-[#031C3A] w-full px-5 py-2.5 rounded-t-xl flex space-x-0.5 items-center border-[#334155] border-[3px]">
                                             <h4 className="text-lg text-[#CAD4E0] font-normal">Active Players</h4>
                                             <QuestionMarkCircleIcon className="w-5 h-5 text-[#CAD4E0]" />
                                         </div>
-                                        <Table className="w-full px-5 border-x-2 border-[#334155]">
+                                        <Table className="w-full px-5 border-x-[3px] border-[#334155]">
                                             <TableHeader className="w-full">
-                                                <TableRow className="bg-[#031C3A] hover:bg-[#031C3A] border-b-[#334155] !border-b-2">
+                                                <TableRow className="bg-[#031C3A] hover:bg-[#031C3A] border-b-[#334155] !border-b-[3px]">
                                                     <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Gladiether</TableHead>
                                                     <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Username</TableHead>
                                                     <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Chances</TableHead>
@@ -133,7 +133,7 @@ export default function Play() {
                                                 </TableRow>
                                                 {
                                                     active_players.map((player, i) => (
-                                                        <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full border-b-[#334155] !border-b-2`)} key={player.id}>
+                                                        <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full border-b-[#334155] !border-b-[3px]`)} key={player.id}>
                                                             <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
                                                                 <Image src="/avatar-1.png" width={65} height={65} alt="gladiether" />
                                                             </TableHead>
