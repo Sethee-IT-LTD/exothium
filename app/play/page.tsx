@@ -81,7 +81,7 @@ export default function Play() {
                                 <div className="w-3/4 h-full space-y-10">
                                     <div className="w-full h-[450px] bg-black bg-[url('/players-bg.png')] bg-no-repeat bg-cover bg-center border-y-4 border-[#031C3A] rounded-2xl
                 flex flex-col items-center justify-center">
-                                        <div className="w-[65%] flex justify-between items-center -mt-6 relative">
+                                        <div className="w-[65%] flex justify-between items-center -mt-6 relative space-x-0.5">
                                             <div className="absolute -right-[150px] -top-14">
                                                 <Countdown seconds={7200} />
                                             </div>
