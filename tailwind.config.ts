@@ -67,10 +67,34 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "blade-1-cut": {
+          "0%": {
+            transform: 'rotate(0deg)'
+          },
+          "50%": {
+            transform: 'rotate(10deg)'
+          },
+          "100%": {
+            transform: 'rotate(0deg)'
+          }
+        },
+        "blade-2-cut": {
+          "0%": {
+            transform: 'rotate(0deg)'
+          },
+          "50%": {
+            transform: 'rotate(-10deg)'
+          },
+          "100%": {
+            transform: 'rotate(0deg)'
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "blade-1-cut": "blade-1-cut 2s infinite",
+        "blade-2-cut": "blade-2-cut 2s infinite",
       },
     },
   },

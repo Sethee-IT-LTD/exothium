@@ -86,7 +86,10 @@ export default function Play() {
                                                 <Countdown seconds={7200} />
                                             </div>
                                             <Player image="/avatar-1.png" name="GrowleR" power="110.6" />
-                                            <Image src="/battle.png" width={175} height={175} alt="battle" />
+                                            <div className="relative">
+                                                <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut" />
+                                                <Image src="/blade-2.png" width={175} height={175} alt="battle" className="-mt-[175px] animate-blade-2-cut" />
+                                            </div>
                                             <Player image="/avatar-2.png" name="Mecurolia" power="50.3" />
                                         </div>
                                     </div>
