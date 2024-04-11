@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Table, TableHead, TableHeader, TableRow } from "../components/table";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import { cn } from "../lib/utils";
-import { Badge } from "../components/badge";
 import History from "../components/history";
 
 export default function Home() {

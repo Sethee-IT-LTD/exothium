@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Connect from "./connect/connect";
 import Link from "next/link";
@@ -16,5 +18,5 @@ export default function Header() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
