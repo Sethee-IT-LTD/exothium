@@ -116,7 +116,10 @@ export default function Play() {
                                                             The result will display in a moment
                                                         </DialogDescription>
                                                     </DialogHeader>
-                                                    <Image src="/battle.png" width={175} height={175} alt="battle" />
+                                                    <div className="relative">
+                                                        <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut" />
+                                                        <Image src="/blade-2.png" width={175} height={175} alt="battle" className="-mt-[195px] animate-blade-2-cut" />
+                                                    </div>
                                                 </DialogContent>
                                             </Dialog>
                                         </div>

@@ -10,19 +10,19 @@ function Connect() {
 
   useEffect(() => {
     const connectToStarknet = async () => {
-      const { wallet }: any = await connect({ modalMode: "neverAsk", webWalletUrl: "https://web.argent.xyz" })
+      const { wallet }: any = await connect({ modalMode: "canAsk", webWalletUrl: "https://web.argent.xyz" })
 
       if (wallet && wallet.isConnected) {
         setConnection(wallet)
         setAccount(wallet.account)
         setAddress(wallet.selectedAddress)
       }
-      connectToStarknet()
     }
+    connectToStarknet()
   }, [])
 
   const connectWallet = async () => {
-    const { wallet }: any = await connect({ webWalletUrl: "https://web.argent.xyz" })
+    const { wallet }: any = await connect({ modalMode: "canAsk", webWalletUrl: "https://web.argent.xyz" })
 
     if (wallet && wallet.isConnected) {
       setConnection(wallet)

@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   const [mounted, setMounted] = useState(false);
-  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -16,13 +15,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className} onClick={() => {
-        if (typeof Audio !== "undefined" && playing == false) {
-          const audio = new Audio("/music/audio_1.mp3");
-          audio.play();
-          setPlaying(true);
-        }
-      }}>
+      <body className={inter.className}>
         {mounted && children}
       </body>
     </html >
