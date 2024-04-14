@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import StarknetProvider from '../provider/starknet-provider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {mounted && children}
+        <StarknetProvider>
+          {mounted && children}
+        </StarknetProvider>
       </body>
     </html >
   )
