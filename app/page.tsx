@@ -119,10 +119,10 @@ export default function Home() {
                     </div>
                     <div className="w-full flex justify-between items-center -mt-6 relative bg-[#0A1017] border-[3px] border-[#031C3A]
                     h-full rounded-2xl space-x-2.5">
-                      <div className="w-[50%]">
+                      <div className="w-[45%]">
                         <Image src="/avatar-1.png" width={325} height={325} alt="avatar" />
                       </div>
-                      <div className="w-[50%] h-full py-4 pr-8">
+                      <div className="w-[55%] h-full py-4 pr-8">
                         <div className="w-full h-fit border-b-2 border-[#272727]">
                           <h3 className="text-[#F9F9F9] text-3xl">Buy Gladiether</h3>
                           <p className="text-[#A0A0A9] text-lg pb-5">

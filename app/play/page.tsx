@@ -70,30 +70,31 @@ export default function Play() {
         <main className="w-full min-h-screen bg-[url('/spider-bg.png')] bg-no-repeat bg-cover bg-center bg-[#050C14]/95 bg-blend-darken">
             <Header />
             <div className="flex justify-center w-full">
-                <div className="flex flex-col items-center justify-center mt-5 px-16 h-full w-full max-w-[1560px] pb-8">
+                <div className="flex flex-col items-center justify-center mt-5 px-4 sm:px-14 2xl:px-16 h-full w-full max-w-[1560px] pb-8">
                     <Tabs defaultValue="arena" className="w-full flex flex-col items-center justify-center h-full">
                         <TabsList className="bg-[#031C3A]">
                             <TabsTrigger value="arena" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">Arena</TabsTrigger>
                             <TabsTrigger value="history" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">History</TabsTrigger>
                         </TabsList>
                         <TabsContent value="arena" className="w-full h-full mt-10">
-                            <div className="w-full flex space-x-10 h-full">
-                                <div className="w-3/4 h-full space-y-10">
-                                    <div className="w-full h-[450px] bg-black bg-[url('/players-bg.png')] bg-no-repeat bg-cover bg-center border-y-4 border-[#031C3A] rounded-2xl
-                flex flex-col items-center justify-center">
-                                        <div className="w-[65%] flex justify-between items-center -mt-6 relative space-x-0.5">
-                                            <div className="absolute -right-[150px] -top-14">
+                            <div className="w-full flex flex-col xl:flex-row xl:space-x-10 h-full space-y-10 xl:space-y-0">
+                                <div className="xl:w-3/4 h-full space-y-10">
+                                    <div className="w-full h-[350px] lg:h-[450px] bg-black bg-[url('/players-bg.png')] bg-no-repeat bg-cover bg-center 
+                                    border-x-4 border-y-2 lg:border-x-0 lg:border-y-4 border-[#031C3A] rounded-2xl flex flex-col items-center justify-center">
+                                        <div className="w-[90%] lg:w-[75%] 2xl:w-[65%] flex justify-between items-center -mt-6 relative space-x-0.5">
+                                            <div className="xl:absolute xl:-right-[150px] xl:-top-14 hidden">
                                                 <Countdown seconds={7200} />
                                             </div>
                                             <Player image="/avatar-1.png" name="GrowleR" power="110.6" />
-                                            <div className="relative">
-                                                <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut" />
+                                            <div className="relative mt-[250px] xl:mt-0">
+                                                <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut 
+                                                absolute bottom-[82px] sm:bottom-10 md:bottom-[10px] xl:-bottom-3 lg:-bottom-0.5 xl:relative 2xl:bottom-0" />
                                                 <Image src="/blade-2.png" width={175} height={175} alt="battle" className="-mt-[175px] animate-blade-2-cut" />
                                             </div>
                                             <Player image="/avatar-2.png" name="Mecurolia" power="50.3" />
                                         </div>
                                     </div>
-                                    <div className="w-full p-8 border-4 border-[#031C3A] rounded-xl bg-[#0E1824] flex justify-between items-center">
+                                    <div className="w-full p-8 border-4 border-[#031C3A] rounded-xl bg-[#0E1824] flex flex-col xl:flex-row xl:justify-between xl:items-center">
                                         <div className="space-y-1.5">
                                             <p className="text-lg text-[#D9DCDD]">Power</p>
                                             <div className="w-80 flex items-center border-2 border-[#031C3A] p-2.5 rounded-md">
@@ -184,7 +185,7 @@ export default function Play() {
                             <History />
                         </TabsContent>
                     </Tabs>
-                </div >
+                </div>
             </div>
         </main>
     )
