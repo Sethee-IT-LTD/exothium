@@ -80,8 +80,8 @@ export default function Play() {
                             <div className="w-full flex flex-col xl:flex-row xl:space-x-5 2xl:space-x-10 h-full space-y-10 xl:space-y-0">
                                 <div className="xl:w-3/4 h-full space-y-10">
                                     <div className="w-full h-[350px] sm:h-[375px] md:h-[450px] lg:h-[450px] bg-black bg-[url('/players-bg.png')] bg-no-repeat bg-cover bg-center 
-                                    border-x-4 border-y-2 lg:border-x-0 lg:border-y-4 xl:border-y-0 xl:border-x-4 2xl:border-y-4 2xl:border-x-0 border-[#031C3A] 
-                                    rounded-2xl flex flex-col items-center justify-center">
+                                        border-x-4 border-y-2 lg:border-x-0 lg:border-y-4 xl:border-y-0 xl:border-x-4 2xl:border-y-4 2xl:border-x-0 border-[#031C3A] 
+                                        rounded-2xl flex flex-col items-center justify-center">
                                         <div className="w-[90%] lg:w-[75%] 2xl:w-[65%] -mt-6 sm:-mt-12 md:-mt-16 lg:-mt-14 relative">
                                             <div className="xl:absolute xl:-right-[80px] 2xl:-right-[150px] xl:-top-14 mt-16">
                                                 <Countdown seconds={7200} />
@@ -97,21 +97,47 @@ export default function Play() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="w-full p-8 border-4 border-[#031C3A] rounded-xl bg-[#0E1824] flex flex-col xl:flex-row xl:justify-between xl:items-center">
-                                        <div className="space-y-1.5">
+                                    <div className="w-full p-4 md:p-8 border-4 border-[#031C3A] rounded-xl bg-[#0E1824] flex flex-col md:flex-row 
+                                    md:justify-between md:items-center space-y-3.5 md:space-y-0 md:space-x-3.5 h-full relative">
+                                        <div className="space-y-1.5 w-full">
                                             <p className="text-lg text-[#D9DCDD]">Power</p>
-                                            <div className="w-80 flex items-center border-2 border-[#031C3A] p-2.5 rounded-md">
-                                                <input className="w-full border-0 outline-0 bg-transparent text-white mr-1.5" type="number" min={0} />
-                                                <div className="bg-transparent border-2 border-[#031C3A] rounded-md p-1.5 w-fit">
-                                                    <Image src="/strk.png" width={25} height={25} alt="strk" />
+                                            <div className="w-full flex items-center justify-between space-x-3.5">
+                                                <div className="w-full lg:w-80 flex items-center border-2 border-[#031C3A] p-2.5 rounded-md">
+                                                    <input className="w-full border-0 outline-0 bg-transparent text-white mr-1.5" type="number" min={0} />
+                                                    <div className="bg-transparent border-2 border-[#031C3A] rounded-md p-1.5 w-fit">
+                                                        <Image src="/strk.png" width={25} height={25} alt="strk" />
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-3.5 md:space-y-0 md:space-x-3.5 w-full md:w-fit md:flex md:flex-row md:items-center hidden 
+                                                lg:flex lg:flex-row lg:justify-between">
+                                                    <button className="bg-white px-20 py-3.5 rounded-lg text-black w-full md:w-fit">Flee</button>
+                                                    <Dialog className="w-fit md:w-full">
+                                                        <DialogTrigger className="w-fit md:w-full">
+                                                            <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] 
+                                                    px-20 py-3.5 w-full md:w-fit rounded-lg text-white">Fight</button>
+                                                        </DialogTrigger>
+                                                        <DialogContent className="flex flex-col items-center justify-center bg-[#0A1017]">
+                                                            <DialogHeader className="flex flex-col items-center justify-center">
+                                                                <DialogTitle className="text-3xl text-white">Awaiting Result</DialogTitle>
+                                                                <DialogDescription>
+                                                                    The result will display in a moment
+                                                                </DialogDescription>
+                                                            </DialogHeader>
+                                                            <div className="relative">
+                                                                <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut" />
+                                                                <Image src="/blade-2.png" width={175} height={175} alt="battle" className="-mt-[195px] animate-blade-2-cut" />
+                                                            </div>
+                                                        </DialogContent>
+                                                    </Dialog>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="space-x-3.5 mt-10">
-                                            <button className="bg-white px-20 py-3.5 rounded-lg text-black">Flee</button>
-                                            <Dialog>
-                                                <DialogTrigger>
-                                                    <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-20 py-3.5 rounded-lg text-white">Fight</button>
+                                        <div className="space-y-3.5 md:space-y-0 md:space-x-3.5 w-full md:w-fit flex flex-col lg:flex-row lg:items-center md:hidden">
+                                            <button className="bg-white px-20 py-3.5 rounded-lg text-black w-full lg:w-fit">Flee</button>
+                                            <Dialog className="w-full lg:w-fit">
+                                                <DialogTrigger className="w-full lg:w-fit">
+                                                    <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] 
+                                                    px-20 py-3.5 w-full lg:w-fit rounded-lg text-white">Fight</button>
                                                 </DialogTrigger>
                                                 <DialogContent className="flex flex-col items-center justify-center bg-[#0A1017]">
                                                     <DialogHeader className="flex flex-col items-center justify-center">
