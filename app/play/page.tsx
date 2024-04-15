@@ -165,18 +165,18 @@ export default function Play() {
                                                 <TableRow className="bg-[#031C3A] hover:bg-[#031C3A] border-b-[#334155] !border-b-[3px]">
                                                     <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Gladiether</TableHead>
                                                     <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Username</TableHead>
-                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Chances</TableHead>
-                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Power</TableHead>
+                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5 hidden sm:block">Chances</TableHead>
+                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5 hidden sm:block">Power</TableHead>
                                                 </TableRow>
                                                 {
                                                     active_players.map((player, i) => (
                                                         <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full border-b-[#334155] !border-b-[3px]`)} key={player.id}>
                                                             <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
-                                                                <Image src="/avatar-1.png" width={65} height={65} alt="gladiether" />
+                                                                <Image src={player.icon} width={65} height={65} alt="gladiether" />
                                                             </TableHead>
                                                             <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
-                                                            <TableHead className="text-lg font-normal py-3.5 text-[#F15A24]">99.96%</TableHead>
-                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">110.6</TableHead>
+                                                            <TableHead className="text-lg font-normal py-3.5 text-[#F15A24] hidden sm:block">99.96%</TableHead>
+                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5 hidden sm:block">110.6</TableHead>
                                                         </TableRow>
                                                     ))
                                                 }
@@ -184,7 +184,7 @@ export default function Play() {
                                         </Table>
                                     </div>
                                 </div>
-                                <div className="w-[35%] h-fit border-4 border-[#031C3A] rounded-xl bg-[#0A1017] p-2.5">
+                                <div className="xl:w-[35%] h-fit border-4 border-[#031C3A] rounded-xl bg-[#0A1017] p-2.5">
                                     <Tabs defaultValue="wins" className="w-full flex flex-col items-center justify-start h-full">
                                         <TabsList className="bg-[#031C3A] w-full">
                                             <TabsTrigger value="wins" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white w-full text-lg">
