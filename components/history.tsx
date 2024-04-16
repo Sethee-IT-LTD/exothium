@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { cn } from "../lib/utils";
 import { Badge } from "./badge";
+import { useRouter } from "next/navigation";
 
 export default function History() {
 
@@ -78,6 +79,8 @@ export default function History() {
         },
     ]
 
+    const router = useRouter();
+
     return (
         <div className="w-full flex justify-center mt-5">
             <div className="max-w-3xl w-full h-fit border-[3px] border-[#031C3A] rounded-lg">
@@ -91,7 +94,7 @@ export default function History() {
                             histories.map(history => (
                                 <div className="space-y-5" key={history.id}>
                                     <div className="from-transparent via-[#031C3A] to-transparent bg-gradient-to-r h-[3px]" />
-                                    <div className="flex items-center justify-between space-x-5">
+                                    <div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:items-center md:justify-between md:space-x-5">
                                         <div className="flex-1 flex space-x-3.5">
                                             <div>
                                                 <Image src={history.players[0].image} width={150} height={150} alt="avatar" />
@@ -107,8 +110,9 @@ export default function History() {
                                                     "bg-[#B81C1C] hover:bg-[#B81C1C]" : "bg-[#16A24A] hover:bg-[#16A24A]")}>{history.players[0].status}</Badge>
                                             </div>
                                         </div>
-                                        <div className="from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] w-[3px] h-32 bg-gradient-to-br" />
-                                        <div className="flex-1 flex space-x-3.5">
+                                        <div className="from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] h-0.5 w-full bg-gradient-to-br block md:hidden" />
+                                        <div className="from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] w-[3px] h-32 bg-gradient-to-br hidden md:block" />
+                                        <div className="flex-1 flex flex-row-reverse md:flex-row space-x-3.5 items-center md:items-start">
                                             <div>
                                                 <Image src={history.players[1].image} width={150} height={150} alt="avatar" />
                                             </div>
@@ -124,13 +128,14 @@ export default function History() {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="from-transparent via-[#031C3A] to-transparent bg-gradient-to-r h-[3px] md:hidden" />
                                 </div>
                             ))
                         }
-                        <div className="from-transparent via-[#031C3A] to-transparent bg-gradient-to-r h-[3px]" />
+                        <div className="from-transparent via-[#031C3A] to-transparent bg-gradient-to-r h-[3px] hidden md:block" />
                     </div>
                     <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-20 py-3.5 rounded-lg text-white w-full"
-                        onClick={() => window.location.replace("/play")}>Enter arena</button>
+                        onClick={() => router.push("/play")}>Enter arena</button>
                 </div>
             </div>
         </div>
