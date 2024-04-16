@@ -89,9 +89,10 @@ export default function Play() {
                                             <div className="flex justify-between items-center space-x-0.5 -mt-2 xl:mt-20">
                                                 <Player image="/avatar-1.png" name="GrowleR" power="110.6" />
                                                 <div className="relative mt-[250px] xl:mt-0">
-                                                    <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut 
-                                                absolute bottom-[82px] sm:bottom-10 md:bottom-[10px] xl:bottom-1.5 lg:-bottom-0.5 xl:relative 2xl:bottom-0" />
-                                                    <Image src="/blade-2.png" width={175} height={175} alt="battle" className="-mt-[175px] animate-blade-2-cut" />
+                                                    <Image src="/blade-1.png" width={175} height={175} alt="battle" className="animate-blade-1-cut
+                                                absolute bottom-[82px] sm:bottom-10 md:bottom-[5px] xl:bottom-1.5 lg:-bottom-0.5 xl:relative 2xl:bottom-0" />
+                                                    <Image src="/blade-2.png" width={175} height={175} alt="battle" className="-mt-[175px]
+                                                    xl:-mt-[156px] 2xl:-mt-[175px] animate-blade-2-cut" />
                                                 </div>
                                                 <Player image="/avatar-2.png" name="Mecurolia" power="50.3" />
                                             </div>
