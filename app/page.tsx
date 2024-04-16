@@ -92,14 +92,14 @@ export default function Home() {
               <TabsTrigger value="arena" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">Arena</TabsTrigger>
               <TabsTrigger value="history" className="data-[state=active]:bg-[rgb(10,16,23)] data-[state=active]:text-white px-12 text-lg">History</TabsTrigger>
             </TabsList>
-            <TabsContent value="arena" className="w-full h-full mt-10">
+            <TabsContent value="arena" className="w-full h-full mt-5 xl:mt-10">
               <div className="w-full flex space-x-10 h-full">
-                <div className="w-full h-full space-y-10">
-                  <div className="w-full xl:h-[375px] flex flex-col space-y-5 xl:space-y-0 xl:flex-row xl:items-center xl:justify-between xl:space-x-10">
-                    <div className="w-full flex justify-center items-center -mt-6 relative bg-[url('/arena-bg.png')] lg:py-20 xl:py-0
+                <div className="w-full h-full space-y-10 lg:space-y-5 xl:space-y-10">
+                  <div className="w-full flex flex-col space-y-5 xl:space-y-0 xl:flex-row xl:items-center xl:justify-between xl:space-x-10 min-h-full">
+                    <div className="w-full md:h-[375px] xl:h-[402px] xl:mt-6 flex justify-center items-center xl:mb-6 relative bg-[url('/arena-bg.png')] lg:py-20 xl:py-0
                     bg-no-repeat bg-cover bg-center bg-blend-multiply h-full border-[3px] border-[#031C3A] rounded-2xl">
                       <div className="flex flex-col items-center space-y-2.5 w-full lg:w-fit px-3.5 pt-5 pb-3.5 bg-[#0A1017CC]/80 
-                      lg:border-[3px] border-[#031C3A] bg-blend-multiply rounded-xl">
+                      lg:border-[3px] border-[#031C3A] bg-blend-multiply rounded-xl md:max-w-sm">
                         <h4 className="text-white text-xl font-medium">Enter Arena</h4>
                         <div className="space-y-1.5 w-full">
                           <p className="text-[#9D9B9A]">Amount</p>
@@ -118,9 +118,9 @@ export default function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center -mt-6 relative bg-[#0A1017] border-[3px] border-[#031C3A]
-                    h-full rounded-2xl space-x-2.5 lg:p-10 xl:p-0">
-                      <div className="sm:w-[45%]">
+                    <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center -mt-6 relative bg-[#0A1017] 
+                    border-[3px] border-[#031C3A] h-full rounded-2xl space-x-2.5 lg:p-10 xl:p-0 xl:h-[402px]">
+                      <div className="sm:w-[45%] flex justify-center items-center w-full sm:block mt-4 sm:mt-0">
                         <Image src="/avatar-1.png" width={325} height={325} alt="avatar" />
                       </div>
                       <div className="sm:w-[55%] w-full h-full py-4 pr-2 sm:px-0 xl:pr-8">
@@ -135,7 +135,7 @@ export default function Home() {
                         </div>
                         <div className="pt-8 space-y-3.5 w-full pr-3">
                           <div className="w-full space-y-1.5">
-                            <div className="w-full xl:w-80 flex space-x-2.5 items-center border-2 border-[#031C3A] py-1.5 pl-2.5 rounded-md">
+                            <div className="w-full 2xl:w-80 flex space-x-2.5 items-center border-2 border-[#031C3A] py-1.5 pl-2.5 rounded-md">
                               <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" min={0} />
                               <div className="h-10 w-[1px] bg-white" />
                               <div className="pr-2.5">
@@ -149,14 +149,16 @@ export default function Home() {
                               <QuestionMarkCircleIcon className="w-5 h-5 text-[#A0A0A9]" />
                             </div>
                           </div>
-                          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-16 lg:px-20 py-3.5 rounded-lg text-white w-full">Buy Gladiether</button>
+                          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] 
+                          px-16 lg:px-20 xl:px-16 2xl:px-20 py-3.5 rounded-lg text-white w-full">Buy Gladiether</button>
                         </div>
                       </div>
                     </div>
                   </div>
                   {/* Table */}
                   <div className="w-full">
-                    <div className="bg-[#031C3A] w-full px-5 py-2.5 rounded-t-xl flex space-x-0.5 items-center justify-between border-[#334155] border-[3px]">
+                    <div className="bg-[#031C3A] w-full px-5 py-2.5 rounded-t-xl flex space-x-0.5 items-center justify-between 
+                    border-[#334155] border-[3px] -mt-[22px] lg:-mt-0">
                       <div className="flex items-center space-x-1.5">
                         <Image src="/trophy.png" width={20} height={20} alt="trophy" />
                         <h3 className="text-lg text-[#CAD4E0] font-normal">Top 10 Players</h3>
