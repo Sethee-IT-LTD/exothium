@@ -86,7 +86,7 @@ export default function Home() {
     <main className="w-full min-h-screen bg-[#050C14]">
       <Header />
       <div className="flex justify-center w-full">
-        <div className="flex flex-col items-center justify-center mt-5 px-16 h-full w-full max-w-[1560px] pb-8">
+        <div className="flex flex-col items-center justify-center mt-5 px-4 sm:px-14 xl:px-16 h-full w-full max-w-[1560px] pb-8">
           <Tabs defaultValue="arena" className="w-full flex flex-col items-center justify-center h-full">
             <TabsList className="bg-[#031C3A]">
               <TabsTrigger value="arena" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white px-12 text-lg">Arena</TabsTrigger>
@@ -95,14 +95,15 @@ export default function Home() {
             <TabsContent value="arena" className="w-full h-full mt-10">
               <div className="w-full flex space-x-10 h-full">
                 <div className="w-full h-full space-y-10">
-                  <div className="w-full h-[375px] flex items-center justify-between space-x-10">
-                    <div className="w-full flex justify-center items-center -mt-6 relative bg-[url('/arena-bg.png')]
+                  <div className="w-full xl:h-[375px] flex flex-col space-y-5 xl:space-y-0 xl:flex-row xl:items-center xl:justify-between xl:space-x-10">
+                    <div className="w-full flex justify-center items-center -mt-6 relative bg-[url('/arena-bg.png')] lg:py-20 xl:py-0
                     bg-no-repeat bg-cover bg-center bg-blend-multiply h-full border-[3px] border-[#031C3A] rounded-2xl">
-                      <div className="flex flex-col items-center space-y-2.5 px-3.5 pt-5 pb-3.5 bg-[#0A1017CC]/80 border-[3px] border-[#031C3A] bg-blend-multiply rounded-xl">
+                      <div className="flex flex-col items-center space-y-2.5 w-full lg:w-fit px-3.5 pt-5 pb-3.5 bg-[#0A1017CC]/80 
+                      lg:border-[3px] border-[#031C3A] bg-blend-multiply rounded-xl">
                         <h4 className="text-white text-xl font-medium">Enter Arena</h4>
-                        <div className="space-y-1.5">
+                        <div className="space-y-1.5 w-full">
                           <p className="text-[#9D9B9A]">Amount</p>
-                          <div className="w-80 flex space-x-5 items-center border-2 border-[#031C3A] bg-[#0A1017] py-1.5 pl-2.5 rounded-md">
+                          <div className="w-full lg:w-80 flex space-x-5 items-center border-2 border-[#031C3A] bg-[#0A1017] py-1.5 pl-2.5 rounded-md">
                             <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" min={0} />
                             <div className="pr-2">
                               <button className="px-3.5 py-1.5 text-white bg-[#084DA0] rounded-md text-lg">Max</button>
@@ -117,21 +118,24 @@ export default function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="w-full flex justify-between items-center -mt-6 relative bg-[#0A1017] border-[3px] border-[#031C3A]
-                    h-full rounded-2xl space-x-2.5">
-                      <div className="w-[45%]">
+                    <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center -mt-6 relative bg-[#0A1017] border-[3px] border-[#031C3A]
+                    h-full rounded-2xl space-x-2.5 lg:p-10 xl:p-0">
+                      <div className="sm:w-[45%]">
                         <Image src="/avatar-1.png" width={325} height={325} alt="avatar" />
                       </div>
-                      <div className="w-[55%] h-full py-4 pr-8">
-                        <div className="w-full h-fit border-b-2 border-[#272727]">
+                      <div className="sm:w-[55%] w-full h-full py-4 pr-2 sm:px-0 xl:pr-8">
+                        <div className="w-full h-fit">
                           <h3 className="text-[#F9F9F9] text-3xl">Buy Gladiether</h3>
-                          <p className="text-[#A0A0A9] text-lg pb-5">
+                          <p className="text-[#A0A0A9] text-lg">
                             The power of the Gladiether will be determined by the amount of ETH/STRK you spend.
                           </p>
                         </div>
-                        <div className="pt-8 space-y-3.5">
+                        <div className="pr-2 md:pr-3.5">
+                          <div className="mt-8 bg-[#272727] h-0.5 w-full" />
+                        </div>
+                        <div className="pt-8 space-y-3.5 w-full pr-3">
                           <div className="w-full space-y-1.5">
-                            <div className="w-80 flex space-x-2.5 items-center border-2 border-[#031C3A] py-1.5 pl-2.5 rounded-md">
+                            <div className="w-full xl:w-80 flex space-x-2.5 items-center border-2 border-[#031C3A] py-1.5 pl-2.5 rounded-md">
                               <input className="w-full border-0 outline-0 bg-transparent text-white" type="number" min={0} />
                               <div className="h-10 w-[1px] bg-white" />
                               <div className="pr-2.5">
@@ -145,7 +149,7 @@ export default function Home() {
                               <QuestionMarkCircleIcon className="w-5 h-5 text-[#A0A0A9]" />
                             </div>
                           </div>
-                          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-20 py-3.5 rounded-lg text-white w-full">Buy Gladiether</button>
+                          <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] px-16 lg:px-20 py-3.5 rounded-lg text-white w-full">Buy Gladiether</button>
                         </div>
                       </div>
                     </div>
@@ -163,8 +167,12 @@ export default function Home() {
                       <TableHeader className="w-full !border-[#334155]">
                         <TableRow className="bg-transparent border-[#334155] !border-b-[3px] !border-x-[3px]">
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Rank</TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Username</TableHead>
-                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Chances</TableHead>
+                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">
+                            <p className="hidden md:block">Username</p>
+                          </TableHead>
+                          <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">
+                            <p className="hidden md:block">Chances</p>
+                          </TableHead>
                           <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Power</TableHead>
                         </TableRow>
                         {
@@ -172,11 +180,11 @@ export default function Home() {
                             <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full !border-x-[3px] border-x-[#334155] border-b-[#334155] !border-b-[3px]`)} key={player.id}>
                               <TableHead className="h-[75px] flex space-x-5 items-center py-2.5">
                                 <Image src={`/${i + 1}.png`} width={65} height={65} alt="gladiether" className="w-[50px] h-[50px]" />
-                                <Image src="/avatar-1.png" width={65} height={65} alt="gladiether" />
+                                <Image src={player.icon} width={65} height={65} alt="gladiether" />
                               </TableHead>
-                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
-                              <TableHead className="text-lg font-normal py-3.5 text-[#F15A24]">99.96%</TableHead>
-                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">110.6</TableHead>
+                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5"><p className="hidden md:block">{player.username}</p></TableHead>
+                              <TableHead className="text-lg font-normal py-3.5 text-[#F15A24]"><p className="hidden md:block">{player.chances}%</p></TableHead>
+                              <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">{player.power}</TableHead>
                             </TableRow>
                           ))
                         }
