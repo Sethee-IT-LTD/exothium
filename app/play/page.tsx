@@ -160,23 +160,27 @@ export default function Play() {
                                             <h4 className="text-lg text-[#CAD4E0] font-normal">Active Players</h4>
                                             <QuestionMarkCircleIcon className="w-5 h-5 text-[#CAD4E0]" />
                                         </div>
-                                        <Table className="w-full px-5 border-x-[3px] border-[#334155]">
-                                            <TableHeader className="w-full">
-                                                <TableRow className="bg-[#031C3A] hover:bg-[#031C3A] border-b-[#334155] !border-b-[3px]">
+                                        <Table className="w-full px-5 border-r-2">
+                                            <TableHeader className="w-full !border-[#334155]">
+                                                <TableRow className="bg-transparent border-[#334155] !border-b-[3px] !border-x-[3px]">
                                                     <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Gladiether</TableHead>
-                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Username</TableHead>
-                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5 hidden sm:block">Chances</TableHead>
-                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5 hidden sm:block">Power</TableHead>
+                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">
+                                                        <p className="hidden md:block">Username</p>
+                                                    </TableHead>
+                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">
+                                                        <p className="hidden md:block">Chances</p>
+                                                    </TableHead>
+                                                    <TableHead className="text-lg text-[#CAD4E0] font-normal py-2.5">Power</TableHead>
                                                 </TableRow>
                                                 {
                                                     active_players.map((player, i) => (
-                                                        <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full border-b-[#334155] !border-b-[3px]`)} key={player.id}>
-                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">
+                                                        <TableRow className={cn(`bg-gradient-to-r !border-r-0 w-full !border-x-[3px] border-x-[#334155] border-b-[#334155] !border-b-[3px]`)} key={player.id}>
+                                                            <TableHead className="h-[75px]">
                                                                 <Image src={player.icon} width={65} height={65} alt="gladiether" />
                                                             </TableHead>
-                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">GrowleR</TableHead>
-                                                            <TableHead className="text-lg font-normal py-3.5 text-[#F15A24] hidden sm:block">99.96%</TableHead>
-                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5 hidden sm:block">110.6</TableHead>
+                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5"><p className="hidden md:block">{player.username}</p></TableHead>
+                                                            <TableHead className="text-lg font-normal py-3.5 text-[#F15A24]"><p className="hidden md:block">{player.chances}%</p></TableHead>
+                                                            <TableHead className="text-lg text-[#CAD4E0] font-normal py-3.5">{player.power}</TableHead>
                                                         </TableRow>
                                                     ))
                                                 }
