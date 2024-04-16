@@ -78,7 +78,7 @@ export default function Play() {
                         </TabsList>
                         <TabsContent value="arena" className="w-full h-full mt-10">
                             <div className="w-full flex flex-col xl:flex-row xl:space-x-5 2xl:space-x-10 h-full space-y-10 xl:space-y-0">
-                                <div className="xl:w-3/4 h-full space-y-10">
+                                <div className="xl:w-[60%] 2xl:w-[65%] h-full space-y-10">
                                     <div className="w-full h-[350px] sm:h-[375px] md:h-[450px] lg:h-[450px] bg-black bg-[url('/players-bg.png')] bg-no-repeat bg-cover bg-center 
                                         border-x-4 border-y-2 lg:border-x-0 lg:border-y-4 xl:border-y-0 xl:border-x-4 2xl:border-y-4 2xl:border-x-0 border-[#031C3A] 
                                         rounded-2xl flex flex-col items-center justify-center">
@@ -188,7 +188,7 @@ export default function Play() {
                                         </Table>
                                     </div>
                                 </div>
-                                <div className="xl:w-[35%] h-fit border-4 border-[#031C3A] rounded-xl bg-[#0A1017] p-2.5">
+                                <div className="xl:w-[40%] 2xl:w-[35%] h-fit border-4 border-[#031C3A] rounded-xl bg-[#0A1017] p-2.5">
                                     <Tabs defaultValue="wins" className="w-full flex flex-col items-center justify-start h-full">
                                         <TabsList className="bg-[#031C3A] w-full">
                                             <TabsTrigger value="wins" className="data-[state=active]:bg-[#0A1017] data-[state=active]:text-white w-full text-lg">
