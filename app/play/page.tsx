@@ -112,7 +112,7 @@ export default function Play() {
                                                 <div className="space-y-3.5 md:space-y-0 md:space-x-3.5 w-full md:w-fit md:flex md:flex-row md:items-center hidden 
                                                 lg:flex lg:flex-row lg:justify-between">
                                                     <button className="bg-white px-20 py-3.5 rounded-lg text-black w-full md:w-fit">Flee</button>
-                                                    <Dialog className="w-fit md:w-full">
+                                                    <Dialog>
                                                         <DialogTrigger className="w-fit md:w-full">
                                                             <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] 
                                                     px-20 py-3.5 w-full md:w-fit rounded-lg text-white">Fight</button>
@@ -135,7 +135,7 @@ export default function Play() {
                                         </div>
                                         <div className="space-y-3.5 md:space-y-0 md:space-x-3.5 w-full md:w-fit flex flex-col lg:flex-row lg:items-center md:hidden">
                                             <button className="bg-white px-20 py-3.5 rounded-lg text-black w-full lg:w-fit">Flee</button>
-                                            <Dialog className="w-full lg:w-fit">
+                                            <Dialog>
                                                 <DialogTrigger className="w-full lg:w-fit">
                                                     <button className="bg-gradient-to-r from-[#F15A24] via-[#F15A24]/90 to-[#9E005D] 
                                                     px-20 py-3.5 w-full lg:w-fit rounded-lg text-white">Fight</button>
